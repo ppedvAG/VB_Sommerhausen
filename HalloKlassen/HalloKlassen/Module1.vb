@@ -10,6 +10,7 @@ Module Module1
         meinAuto.Farbe = "rOsA"
         meinAuto.Kraftstoffsorte = "Diesel"
         meinAuto.Leistung = 743
+        meinAuto.Hupen()
 
         ZeigeAuto(meinAuto)
 

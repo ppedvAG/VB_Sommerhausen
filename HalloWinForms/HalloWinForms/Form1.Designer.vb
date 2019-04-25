@@ -32,6 +32,7 @@ Partial Class Form1
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DVDButton = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.MyButton1 = New HalloWinForms.MyButton()
         Me.FlowLayoutPanel1.SuspendLayout()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -109,6 +110,7 @@ Partial Class Form1
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Yellow
+        Me.Panel1.Controls.Add(Me.MyButton1)
         Me.Panel1.Controls.Add(Me.DVDButton)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 62)
@@ -129,6 +131,16 @@ Partial Class Form1
         '
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 1
+        '
+        'MyButton1
+        '
+        Me.MyButton1.BackColor = System.Drawing.Color.Pink
+        Me.MyButton1.Location = New System.Drawing.Point(413, 60)
+        Me.MyButton1.Name = "MyButton1"
+        Me.MyButton1.Size = New System.Drawing.Size(94, 41)
+        Me.MyButton1.TabIndex = 1
+        Me.MyButton1.Text = "MyButton1"
+        Me.MyButton1.UseVisualStyleBackColor = False
         '
         'Form1
         '
@@ -157,4 +169,5 @@ Partial Class Form1
     Friend WithEvents DVDButton As Button
     Friend WithEvents Timer1 As Timer
     Friend WithEvents TrackBar1 As TrackBar
+    Friend WithEvents MyButton1 As MyButton
 End Class

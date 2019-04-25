@@ -31,6 +31,10 @@
         End Set
     End Property
 
+    Overridable Sub Hupen()
+        Console.Beep(440, Leistung)
+    End Sub
+
 
 #Region "Beispiel für Getter/Setter (wird in .NET als Property implementiert)"
 

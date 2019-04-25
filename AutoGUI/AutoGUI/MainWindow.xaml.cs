@@ -42,9 +42,17 @@ namespace AutoGUI
                 Leistung = 5445
             };
 
+            var einTollesCabrio = new Cabrio
+            {
+                Leistung = 845
+            };
+
+
             List<Auto> autoListe = new List<Auto>();
             autoListe.Add(einAuto);
             autoListe.Add(deinAuto);
+            autoListe.Add(einTollesCabrio);
+
             autoListe.Insert(0, nochEinAuto);
 
             myGrid.ItemsSource = autoListe;
@@ -161,5 +169,14 @@ namespace AutoGUI
                 }
             }
         }
+
+        private void MachBeep(object sender, RoutedEventArgs e)
+        {
+            if (myGrid.SelectedItem is Auto selectedAuto) 
+            {
+                selectedAuto.Hupen();
+            }
+        }
     }
-}
+    }
+
