@@ -60,6 +60,9 @@
 
             </Button>
 
+            <Button Click="Button_Click_1">Zeige ausgewähles Auto</Button>
+            <Button Click="Button_Click_2">Speichern...</Button>
+            <Button Click="Button_Click_3">Laden...</Button>
         </WrapPanel>
 
         <DataGrid Name="myGrid"  />

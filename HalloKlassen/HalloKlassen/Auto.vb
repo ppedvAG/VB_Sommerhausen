@@ -1,4 +1,5 @@
 ﻿Public Class Auto
+    Inherits Object
 
     Property Kraftstoffsorte As String
     Property AnzahlTüren As Integer
