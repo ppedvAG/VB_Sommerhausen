@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows;
+using System.Xml.Serialization;
 using HalloKlassen;
 using Microsoft.Win32;
 
@@ -111,7 +112,7 @@ namespace AutoGUI
                 while (!sr.EndOfStream)
                 {
                     var line = sr.ReadLine();
-                    var chunks = line.Split(trenn);
+                    string[] chunks = line.Split(trenn);
                     listeAutos.Add(new Auto()
                     {
                         AnzahlTüren = int.Parse(chunks[0]),
@@ -124,8 +125,40 @@ namespace AutoGUI
                     });
                 }
                 sr.Close();
+
                 myGrid.ItemsSource = listeAutos;
 
+            }
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            var dlg = new SaveFileDialog();
+            dlg.Title = "Wo sollten die Autos gespeichert werden?";
+            dlg.Filter = "XML Autodatei|*.xml|Alles und mit Scharf!|*.*";
+            if (dlg.ShowDialog().Value)
+            {
+                var listeAutos = myGrid.ItemsSource as List<Auto>;
+                using (var sw = new StreamWriter(dlg.FileName))
+                {
+                    var serial = new XmlSerializer(typeof(List<Auto>));
+                    serial.Serialize(sw, listeAutos);
+                }//sw.Close()
+
+            }
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            var dlg = new OpenFileDialog();
+            dlg.Filter = "XML Autodatei|*.xml|Alles und mit Scharf!|*.*";
+            if (dlg.ShowDialog().Value)
+            {
+                using (var sr = new StreamReader(dlg.FileName))
+                {
+                    var serial = new XmlSerializer(typeof(List<Auto>));
+                    myGrid.ItemsSource = serial.Deserialize(sr) as List<Auto>;
+                }
             }
         }
     }
