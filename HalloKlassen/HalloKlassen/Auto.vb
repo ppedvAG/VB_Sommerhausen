@@ -5,8 +5,8 @@
     Property Umweltklasse As Integer
     Property Innenausstattug As Boolean
 
+    Property BauJahr As Date = Date.Now
     Property Leistung As Integer 'auto property
-
 
     ReadOnly Property LeistungInKW() As Double 'readonly property
         Get
@@ -21,7 +21,7 @@
         Get
             Return _farbe
         End Get
-        Friend Set(value As String)
+        Set(value As String)
             If value.Equals("rosa", StringComparison.CurrentCultureIgnoreCase) Then
                 _farbe = "schwarz"
             Else

@@ -6,35 +6,68 @@
         xmlns:local="clr-namespace:AutoGUI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="600">
-   
+
+
+
+
     <DockPanel>
+
         <DockPanel.Background>
+
             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+
                 <GradientStop Color="#FF160685" Offset="0.014"/>
+
                 <GradientStop Color="Red" Offset="1"/>
+
                 <GradientStop Color="#FF037F6F" Offset="0.471"/>
+
                 <GradientStop Color="#FED1BF21" Offset="0.499"/>
+
             </LinearGradientBrush>
+
         </DockPanel.Background>
 
+
+
         <Menu DockPanel.Dock="Top">
+
             <MenuItem Header="Datei">
+
                 <MenuItem Header="Öffnen"/>
+
                 <Separator/>
+
                 <MenuItem Header="Beenden"/>
+
             </MenuItem>
+
         </Menu>
+
         <StatusBar DockPanel.Dock="Bottom" Height="22" Background="YellowGreen"/>
 
+
+
         <WrapPanel DockPanel.Dock="Top" Margin="12">
-            <Button>
+
+            <Button Click="Button_Click">
+
                 <Button.Effect>
+
                     <DropShadowEffect/>
+
                 </Button.Effect> Lade Autos..
+
             </Button>
+
         </WrapPanel>
-        <DataGrid />
-      
+
+        <DataGrid Name="myGrid"  />
+
+
+
+
 
     </DockPanel>
+
 </Window>

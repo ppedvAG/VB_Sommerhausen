@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using HalloKlassen;
 
 namespace AutoGUI
 {
@@ -23,6 +12,42 @@ namespace AutoGUI
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //HalloKlassen.Auto einAauto = new HalloKlassen.Auto();
+
+            Auto einAuto = new Auto
+            {
+                Leistung = 346,
+                Farbe = "Rot",
+                AnzahlTüren = 12,
+                Kraftstoffsorte = "E99"
+            };
+
+            Auto deinAuto = new Auto
+            {
+                Leistung = 46
+            };
+
+            var nochEinAuto = new Auto
+            {
+                Leistung = 5445
+            };
+
+            List<Auto> autoListe = new List<Auto>();
+            autoListe.Add(einAuto);
+            autoListe.Add(deinAuto);
+            autoListe.Insert(0, nochEinAuto);
+
+            myGrid.ItemsSource = autoListe;
+
+        }
+
+        void ZeigeAuto(Auto einAuto)
+        {
+            MessageBox.Show($"Farbe: {einAuto.Farbe}\nLeistung: {einAuto.Leistung}");
         }
 
     }
