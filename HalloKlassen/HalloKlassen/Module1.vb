@@ -6,7 +6,7 @@ Module Module1
         Console.WriteLine("Hallo Klassen")
 
         Dim meinAuto As Auto 'deklaration
-        meinAuto = New Auto() 'instanzierung
+        meinAuto = New Auto(76) 'instanzierung
         meinAuto.Farbe = "rOsA"
         meinAuto.Kraftstoffsorte = "Diesel"
         meinAuto.Leistung = 743
@@ -14,10 +14,12 @@ Module Module1
 
         ZeigeAuto(meinAuto)
 
-        Dim deinAuto As New Auto() 'deklaration + instanzierung
-        deinAuto.Farbe = "rot"
-        deinAuto.Kraftstoffsorte = "Supa"
-        deinAuto.Leistung = 323
+        Dim deinAuto As New Auto(9) With {
+            .Farbe = "rot",
+            .Kraftstoffsorte = "Supa",
+            .Leistung = 323,
+            .Innenausstattug = True
+        } 'deklaration + instanzierung
 
         ZeigeAuto(deinAuto)
 
@@ -26,6 +28,8 @@ Module Module1
         meinCabrio.Leistung = 600
         meinCabrio.Dachmaterial = "Stoff"
         ZeigeAuto(meinCabrio)
+
+        Dim nenAuto = New Auto("DIesel", 5, 99, True, Date.Now, 666, "rot")
 
         Console.ReadKey()
     End Sub

@@ -24,7 +24,7 @@ namespace AutoGUI
         {
             //HalloKlassen.Auto einAauto = new HalloKlassen.Auto();
 
-            Auto einAuto = new Auto
+            Auto einAuto = new Auto(6)
             {
                 Leistung = 346,
                 Farbe = "Rot",

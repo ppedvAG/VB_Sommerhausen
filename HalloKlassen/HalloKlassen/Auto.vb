@@ -1,9 +1,47 @@
-﻿Public Class Auto
+﻿''' <summary>
+''' Das Auto
+''' </summary>
+Public Class Auto
     Inherits Object
+
+    Sub New()
+        AnzahlTüren = 4
+
+    End Sub
+
+    ''' <summary>
+    ''' MAcht eine neues Auto mit der angegebenenenenne anzahl türen
+    ''' </summary>
+    ''' <param name="anzTür"></param>
+    Sub New(anzTür As Integer)
+        AnzahlTüren = anzTür
+    End Sub
+
+    Public Sub New(kraftstoffsorte As String, anzahlTüren As Integer)
+        Me.Kraftstoffsorte = kraftstoffsorte
+        Me.AnzahlTüren = anzahlTüren
+    End Sub
+
+    Public Sub New(kraftstoffsorte As String, anzahlTüren As Integer, umweltklasse As Integer, innenausstattug As Boolean, bauJahr As Date, leistung As Integer, farbe As String)
+        kraftstoffsorte = kraftstoffsorte
+        anzahlTüren = anzahlTüren
+        umweltklasse = umweltklasse
+        innenausstattug = innenausstattug
+        bauJahr = bauJahr
+        leistung = leistung
+        farbe = farbe
+    End Sub
 
     Property Kraftstoffsorte As String
     Property AnzahlTüren As Integer
     Property Umweltklasse As Integer
+
+    ''' <summary>
+    ''' Hat das Auto eine Innenausstatttung?
+    ''' </summary>
+    ''' <remarks>
+    ''' bla bla bla
+    ''' </remarks>
     Property Innenausstattug As Boolean
 
     Property BauJahr As Date = Date.Now
