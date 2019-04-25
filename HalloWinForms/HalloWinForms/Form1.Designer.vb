@@ -28,13 +28,13 @@ Partial Class Form1
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.TrackBar1 = New System.Windows.Forms.TrackBar()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DVDButton = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.TrackBar1 = New System.Windows.Forms.TrackBar()
         Me.FlowLayoutPanel1.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
@@ -96,6 +96,16 @@ Partial Class Form1
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(566, 62)
         Me.FlowLayoutPanel1.TabIndex = 4
         '
+        'TrackBar1
+        '
+        Me.TrackBar1.Location = New System.Drawing.Point(404, 3)
+        Me.TrackBar1.Maximum = 100
+        Me.TrackBar1.Minimum = 1
+        Me.TrackBar1.Name = "TrackBar1"
+        Me.TrackBar1.Size = New System.Drawing.Size(150, 56)
+        Me.TrackBar1.TabIndex = 4
+        Me.TrackBar1.Value = 1
+        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Yellow
@@ -120,16 +130,6 @@ Partial Class Form1
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 1
         '
-        'TrackBar1
-        '
-        Me.TrackBar1.Location = New System.Drawing.Point(404, 3)
-        Me.TrackBar1.Maximum = 100
-        Me.TrackBar1.Minimum = 1
-        Me.TrackBar1.Name = "TrackBar1"
-        Me.TrackBar1.Size = New System.Drawing.Size(150, 56)
-        Me.TrackBar1.TabIndex = 4
-        Me.TrackBar1.Value = 1
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -141,8 +141,8 @@ Partial Class Form1
         Me.Text = "Form1"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.FlowLayoutPanel1.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
