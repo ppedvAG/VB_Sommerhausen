@@ -6,29 +6,7 @@
         xmlns:local="clr-namespace:AutoGUI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="600">
-    <Window.Resources>
-        <Storyboard x:Key="OnMouseEnter1">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="path">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="229.333">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseInOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="path">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="11.2">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseInOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-    </Window.Resources>
-    <Window.Triggers>
-        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="path">
-            <BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}"/>
-        </EventTrigger>
-    </Window.Triggers>
+   
     <DockPanel>
         <DockPanel.Background>
             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
