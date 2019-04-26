@@ -4,3 +4,6 @@ https://www.rheinwerk-verlag.de/openbook/
 
 GUI für WinForms:
 https://github.com/dennismagno/metroframework-modern-ui
+
+OCX Tutorial
+https://www.codeproject.com/articles/24089/create-activex-in-net-step-by-step

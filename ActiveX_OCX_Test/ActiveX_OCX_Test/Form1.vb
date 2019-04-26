@@ -10,6 +10,16 @@ Imports Microsoft.Win32
 Public Class Form1
 
 
+    Sub New()
+
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        CheckBox1.Text = Assembly.GetExecutingAssembly().GetName().Version.ToString()
+
+    End Sub
     <ComRegisterFunction()>
     Public Shared Sub RegisterClass(key As String)
         Dim sb As StringBuilder = New StringBuilder(key)
