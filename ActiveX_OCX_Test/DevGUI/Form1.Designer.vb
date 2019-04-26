@@ -1,8 +1,6 @@
-﻿Imports System.Runtime.InteropServices
-
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
-    Inherits UserControl
+    Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -23,37 +21,29 @@ Partial Class Form1
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
-    <ComVisible(True)>
     Private Sub InitializeComponent()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Form11 = New ActiveX_OCX_Test.Form1()
         Me.SuspendLayout()
         '
-        'CheckBox1
+        'Form11
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.BackColor = System.Drawing.Color.SkyBlue
-        Me.CheckBox1.Location = New System.Drawing.Point(111, 49)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(100, 21)
-        Me.CheckBox1.TabIndex = 0
-        Me.CheckBox1.Text = "CheckBox1"
-        Me.CheckBox1.UseVisualStyleBackColor = False
+        Me.Form11.BackColor = System.Drawing.Color.HotPink
+        Me.Form11.Location = New System.Drawing.Point(260, 91)
+        Me.Form11.Name = "Form11"
+        Me.Form11.Size = New System.Drawing.Size(349, 233)
+        Me.Form11.TabIndex = 0
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Controls.Add(Me.CheckBox1)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Form11)
         Me.Name = "Form1"
-        Me.Size = New System.Drawing.Size(349, 233)
+        Me.Text = "Form1"
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
-
-
-    <ComVisible(True)>
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents Form11 As ActiveX_OCX_Test.Form1
 End Class

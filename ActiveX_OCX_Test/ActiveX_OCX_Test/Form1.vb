@@ -38,5 +38,7 @@ Public Class Form1
         MessageBox.Show("UnRegistered")
     End Sub
 
-
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        MessageBox.Show("lala")
+    End Sub
 End Class
